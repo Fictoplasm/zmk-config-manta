@@ -28,44 +28,38 @@
 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &mo 3
-                &hm LALT A &hm LCTRL S &hm LCMD D &hm LSHIFT F &kp G
-                                        &kp H &hm RSHIFT J &hm RCMD K &hm RCTRL L &hm RALT P
-                &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &none
-                                    &lt 1 SPACE &lt 2 BSPC
+                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &kp P
+                &hm LALT A &hm LCMD S &hm LCTRL D &hm LSHIFT F &kp G
+                                        &kp H &hm RSHIFT J &hm RCTRL K &hm RCMD L &hm RALT SEMI
+                &kp Z &kp X &kp C &kp V &lt 2 B     &lt 1 N &kp M &kp COMMA &kp DOT &lt 3 ENTER
+                                    &kp BSPC &kp SPACE
             >;
         };
 
         num_layer {
             bindings = <
-                &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
-                &kp ESC &kp LEFT &kp DOWN &kp RIGHT &kp TAB
-                                         &kp DEL &hm RSHIFT KP_N4 &hm RCMD KP_N5 &hm RCTRL KP_N6 &hm RALT KP_N0
-                &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &none
-                                                              &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
-                                                     &trans  &kp BSPC
+                &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT    &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
+                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                  &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+                &kp MINUS &kp UNDER &kp EQUAL &kp PLUS &trans       &trans &none &none &none &none
+                                                     &kp DEL  &trans
             >;
         };
 
         pun_layer {
             bindings = <
-                &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
-                                              &kp CARET &kp AMPS &kp STAR &kp LBKT &none
-                &hm LALT GRAVE &kp LCTRL &kp LCMD &caps_word &kp ESC
-                                        &kp SEMI &hm RSHIFT SQT &hm RCMD SLASH &hm RCTRL BSLH &hm RALT RBKT
-                &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
-                                        &kp COLON &kp DQT &kp QMARK &kp PIPE &none
-                                        &kp RET  &trans
+                &kp ESC &none &kp UP &none &kp TILDE                &kp PIPE &kp QMARK &kp LBRC &kp RBRC &kp DQT
+                &kp TAB &kp LEFT &kp DOWN &kp RIGHT &kp GRAVE       &kp BSLH &hm RSHIFT SLASH &hm RCTRL LBKT &hm RCMD RBKT &hm RALT APOS
+                &kp LG(TAB) &none &none &none &trans                &trans &none &none &none &none
+                                        &trans  &trans
             >;
         };
         
         control_layer {
             bindings = <
-                &none &none &none &none &out OUT_TOG                    &none &out OUT_USB &none &none &none
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                                                                        &none &none &none &none &none
-                &bt BT_NXT &bt BT_PRV &bt BT_CLR &none &out OUT_BLE     &none &none &none &none &none
-                                                                &none &none
+                &none &bt BT_NXT &bt BT_PRV &bt BT_CLR &none           &reset &none &none &none &none
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none     &none &none &none &none &none
+                &none &out OUT_TOG &out OUT_USB &out OUT_BLE &none    &bootloader &none &none &none &trans
+                                                         &none &none
             >;
         };
     };
